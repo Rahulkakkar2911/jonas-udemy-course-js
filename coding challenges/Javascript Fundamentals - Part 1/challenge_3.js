@@ -11,11 +11,11 @@ const minScore = 100;
 
 if (dolphinAverage > koalaAverage && (dolphinAverage >= minScore)) {
 
-	console.log(`Team Dolphins Wins the Trophy by ${(dolphinAverage - koalaAverage) * 3}`);
+	console.log(`Team Dolphins Wins the Trophy by ${((dolphinAverage - koalaAverage) * 3).toPrecision(4)}`);
 
 }
 else if (dolphinAverage < koalaAverage && (koalaAverage >= minScore)) {
-	console.log(`Team koalas Wins the Trophy by ${(koalaAverage - dolphinAverage) * 3}`);
+	console.log(`Team koalas Wins the Trophy by ${((koalaAverage - dolphinAverage) * 3).toPrecision(4)}`);
 }
 else {
 	if (koalaAverage >= minScore && dolphinAverage >= minScore) {
@@ -25,7 +25,7 @@ else {
 		console.log(`No one wins the game`);
 }
 //TEST DATA: No one wins the game
-//TEST DATA BONUS 1: Team koalas Wins the Trophy by 17.000000000000014
+//TEST DATA BONUS 1: Team koalas Wins the Trophy by 17.00
 //TEST DATA BONUS 2: Its a Draw!
 
 
