@@ -59,3 +59,25 @@ const describePopulation = function (country, population) {
 console.log(describePopulation("India", 1380));
 console.log(describePopulation("United States of America", 332));
 console.log(describePopulation("Finland", 5.5));
+
+//Lecture - Introduction to Arrays
+function percentageOfWorld1(population) {
+	return ((population / 7900) * 100).toPrecision(4) + " %";
+}
+const populations = [1380, 332, 5.5, 1440]
+//	or
+//const populations = new Array(1380, 332, 5.5, 1440); -> array constructor function
+const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
+
+//Lecture - Basic Array Operations (Methods)
+const neighbours = ["Sri Lanka", "Pakistan", "China", "Nepal", "Bhutan"];
+neighbours.push("Utopia");
+neighbours.pop();
+if (!neighbours.includes("Germany")) {
+	console.log(`Probably not a central European country :D`);
+}
+
+const countryToBeChanged = "Pakistan";
+const indexOfCC = neighbours.indexOf(countryToBeChanged);
+const countryToBeChangedWith = "Bangladesh";
+neighbours[indexOfCC] = countryToBeChangedWith;
