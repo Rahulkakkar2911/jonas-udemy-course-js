@@ -15,11 +15,7 @@ const gameEvents = new Map([
 
 const [...events] = new Set(gameEvents.values());
 gameEvents.delete(64);
-const computeLog = function (events) {
-	for (const event of events) {
-		console.log(`An ${event} happened, on average, every 9 minutes`);
-	}
-}
+
 const computeLogAdvanced = function (map) {
 	for (const [time, event] of map) {
 		if (time <= 45) {
@@ -30,7 +26,7 @@ const computeLogAdvanced = function (map) {
 		}
 	}
 }
-computeLog(events);
+console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
 computeLogAdvanced(gameEvents)
 /*
 An ⚽ GOAL happened, on average, every 9 minutes

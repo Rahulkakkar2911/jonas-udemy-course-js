@@ -45,7 +45,7 @@ const [gk, ...fieldPlayers1] = players1;
 const allPlayers = [...players1, ...players2];
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 const { odds: { team1, x: draw, team2 } } = game;
-const printGoals = function (...playerNames) {
+const printGoals = function (playerNames) {
 	for (const [index, playerName] of playerNames.entries()) {
 		console.log(`Goal ${index + 1}: ${playerName}`);
 	}
@@ -72,8 +72,8 @@ const scorers = {
 	[game.scored[0]]: 2,
 }
 console.log(scorers);
-printGoals(...game.scored);
-printAvgOdds(game.odds);
+printGoals(game.scored);
+console.log(`Average :  ${printAvgOdds(game.odds)}`);
 printOdds(game);
 //Test Data :
 /*
